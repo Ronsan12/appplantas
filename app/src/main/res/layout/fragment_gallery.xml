@@ -1,0 +1,106 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <!-- Icono del perfil -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Imagen de perfil"
+        android:src="@drawable/perfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Label Ubicación -->
+    <TextView
+        android:id="@+id/location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Ubicación:"
+        android:textColor="#4DC592"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toTopOf="@id/profile_image" />
+
+    <!-- Label Necesidades -->
+    <TextView
+        android:id="@+id/needs_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Necesidades:"
+        android:textColor="#4DC592"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/location_label"
+        app:layout_constraintTop_toBottomOf="@id/location_label"
+        android:layout_marginTop="8dp" />
+
+    <!-- Label Observaciones -->
+    <TextView
+        android:id="@+id/observations_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observaciones:"
+        android:textColor="#4DC592"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/location_label"
+        app:layout_constraintTop_toBottomOf="@id/needs_label"
+        android:layout_marginTop="8dp" />
+
+    <!-- Label Evolución -->
+    <TextView
+        android:id="@+id/evolution_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evolución:"
+        android:textColor="#4DC592"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/location_label"
+        app:layout_constraintTop_toBottomOf="@id/observations_label"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón para subir imagen (ícono de evolución) -->
+    <ImageView
+        android:id="@+id/upload_image_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Botón para subir imagen"
+        android:src="@drawable/add"
+        app:layout_constraintStart_toEndOf="@id/evolution_label"
+        app:layout_constraintTop_toTopOf="@id/evolution_label" />
+
+
+    <!-- Campo de búsqueda -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:queryHint="Buscar por tipo de planta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/evolution_label" />
+
+
+    <!-- RecyclerView para la cuadrícula de imágenes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallery_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/search_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

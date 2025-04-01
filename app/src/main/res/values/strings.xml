@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GardenKeeper</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">GardenKeeper</string>
+    <string name="nav_header_subtitle">info@gardenkeeper.org</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_recordatorios">Recordatorios</string>
+    <string name="reminder_list_description">Lista de recordatorios</string>
+    <string name= "menu_Perfil_de_planta">Perfil de planta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_plant_label">Agregar Nueva Planta</string>
+    <string name="Plant_profile_label">Perfiles de planta</string>
+</resources>

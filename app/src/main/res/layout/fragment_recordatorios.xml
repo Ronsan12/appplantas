@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.recordatorios.RecordatoriosFragment">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Button to open Calendar -->
+
+    <Button
+        android:id="@+id/btnOpenCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Recordatorio"
+        tools:ignore="HardcodedText" />
+
+    <!-- EditText for Note -->
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="AUTOFILL_HINT_NOTE"
+        android:hint="Ingrese Nota"
+        android:importantForAccessibility="yes"
+        android:inputType="text"
+        android:padding="16dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- TextView to display selected date and note -->
+    <TextView
+        android:id="@+id/tvReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:importantForAccessibility="yes"/>
+
+    <!-- ScrollView for existing reminders (if needed) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/reminder_list_description">
+
+        <LinearLayout
+            android:id="@+id/remindersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</LinearLayout>

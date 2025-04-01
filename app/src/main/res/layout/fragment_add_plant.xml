@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.plantprofile.AddPlantFragment">
+
+    <!-- Título del formulario -->
+    <TextView
+        android:id="@+id/add_plant_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Nueva Planta"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <!-- Imagen de la planta -->
+
+    <!-- Botón para subir imagen -->
+
+    <ImageView
+        android:id="@+id/plant_image_preview"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="28dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_plant_title" />
+
+    <Button
+        android:id="@+id/btn_upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subir Imagen"
+        app:layout_constraintTop_toBottomOf="@id/plant_image_preview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Campo para el tipo de planta -->
+    <EditText
+        android:id="@+id/plant_type_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Tipo de Planta"
+        app:layout_constraintTop_toBottomOf="@id/btn_upload_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Campo para la ubicación de la planta -->
+    <EditText
+        android:id="@+id/plant_location_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ubicación de la Planta"
+        app:layout_constraintTop_toBottomOf="@id/plant_type_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Campo para las necesidades de la planta -->
+    <EditText
+        android:id="@+id/plant_needs_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Necesidades de la Planta"
+        app:layout_constraintTop_toBottomOf="@id/plant_location_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Campo para las observaciones de la planta -->
+    <EditText
+        android:id="@+id/plant_observations_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Observaciones"
+        app:layout_constraintTop_toBottomOf="@id/plant_needs_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón para guardar -->
+    <Button
+        android:id="@+id/btn_save_plant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar Planta"
+        app:layout_constraintTop_toBottomOf="@id/plant_observations_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
